@@ -1,0 +1,21 @@
+#dream-clock { 
+    box-shadow:1px 1px 5px 0px rgb(148, 211, 229); 
+    padding: 11px; 
+    display: inline-block;
+}
+
+#dream-clock > div {
+    font-size: 25px;
+    margin-bottom: 12px;
+    box-shadow: 0px 5px 14px -5px rgba(252,0,0,1);
+}
+
+#dream-clock > span {
+    display: inline-block;
+    width: 23px;
+    padding: 3px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 3px;
+    box-shadow:1px 1px 5px 0px rgb(197, 74, 204);
+}
