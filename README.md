@@ -18,3 +18,13 @@ Master, MegaMenu (fixed), Home (slider, static msgs, live msgs, birthdays), Anim
 ## Da Dream
 
 NgCf : angular client forms platform, simple server side setting and you have all you validations running server and client PLUS auto server validation, something cool, i made it once, i want to do it again.
+
+## Some Documentation
+installed angular material from `https://material.angular.io`, so that means
+
+`npm install --save @angular/material @angular/cdk`
+
+`npm install --save angular/material2-builds angular/cdk-builds`
+
+and aninations
+`npm install --save @angular/animations`
