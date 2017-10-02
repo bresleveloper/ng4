@@ -7,13 +7,25 @@ So its their "fault" i named my project my-dream-app
 
 But then again, thats should be the point here, to show my dreamy ideas and that i can achieve them all
 
+Take a look in my Blog https://bresleveloper.blogspot.co.il/
+
 ## Road Map
 
 So for now, i want this to be a standard show case with all standard elements and pages so..
 
 ## Pages to Build
 
-Master, MegaMenu (fixed), Home (slider, static msgs, live msgs, birthdays), Animations, Articles, Search, About, Contact (form)
+Master, *MegaMenu* (fixed), Home (slider, static msgs, live msgs, birthdays), Animations, Articles, Search, About, Contact (form)
+
+Home - Slider / static + feed / birthday long low
+
+Articles - list / Search - list / Article - item
+
+Animations page
+
+connect to API - my server app, Firebase
+
+About / Contact (form)
 
 ## Da Dream
 
@@ -28,3 +40,12 @@ installed angular material from `https://material.angular.io`, so that means
 
 and aninations
 `npm install --save @angular/animations`
+
+## last-build, next build
+last build::
+
+breaking app into modules, using service, inheriting service, routing.
+
+next::
+
+after blogging all that, do UI

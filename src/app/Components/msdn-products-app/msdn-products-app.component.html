@@ -1,0 +1,13 @@
+
+<h2>
+  msdn-products-app
+</h2>
+
+
+<md-grid-list cols="2" rowHeight="2:1">
+  <md-grid-tile *ngFor="let p of svc.products" > 
+      {{ p.Category }} <br/> 
+      {{ p.Name }} <br/> 
+      {{ p.Price }} $
+  </md-grid-tile>
+</md-grid-list>

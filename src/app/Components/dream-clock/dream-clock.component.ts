@@ -1,14 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'dream-clock',
   templateUrl: './dream-clock.component.html',
   styleUrls: ['./dream-clock.component.css']
 })
-export class DreamClockComponent  {
+export class DreamClockComponent implements OnDestroy {
   Hrs;
   Mins;
   Secs;
+  interval;
+
+  ngOnDestroy() {
+    //console.log('DreamClockComponent destroy');
+    clearInterval(this.interval);
+  }
 
   constructor() {
     var d = new Date();
@@ -16,7 +22,7 @@ export class DreamClockComponent  {
     this.Mins = d.getMinutes();
     this.Secs = d.getSeconds();
 
-    setInterval(() => {         //replaced function() by ()=>
+    this.interval = setInterval(() => {  
       console.log('tick'); // just testing if it is working
 
       if ( ++this.Secs > 59){

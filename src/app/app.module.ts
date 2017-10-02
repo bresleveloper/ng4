@@ -1,29 +1,37 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MaterialArmadaModule} from './Modules/material.module';
-import { LOCALE_ID } from '@angular/core';
+import { LOCALE_ID } from '@angular/core'; 
+import { ComponentsSwarmModule } from './Modules/components.module';
+import { DreamRoutingModule } from './Modules/dream-routing.module';
 
 import { AppComponent } from './app.component';
-import { DreamClockComponent } from './Components/dream-clock/dream-clock.component';
-import { MaterialDatepickerComponent } from './Components/material-datepicker/material-datepicker.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DreamClockComponent,
-    MaterialDatepickerComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule,
     BrowserAnimationsModule,
-    MaterialArmadaModule
+    ComponentsSwarmModule,
+    DreamRoutingModule,
+    HttpModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'he-IL' }
+    { provide: LOCALE_ID, useValue: 'he-IL' },
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+/*
+
+git add .
+git commit -m ""
+git push -u origin master
+ng build --prod --base-href https://bresleveloper.github.io/ng4/
+ngh
+
+
+*/
