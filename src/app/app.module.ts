@@ -2,20 +2,29 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { LOCALE_ID } from '@angular/core'; 
+import { MaterialArmadaModule } from './Modules/material.module';
 import { ComponentsSwarmModule } from './Modules/components.module';
 import { DreamRoutingModule } from './Modules/dream-routing.module';
 
 import { AppComponent } from './app.component';
+import { NavigationComponent } from './Components/navigation/navigation.component';
+
+import 'hammerjs';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavigationComponent],
   imports: [
     BrowserAnimationsModule,
+    BrowserModule,
+
+    MaterialArmadaModule,
     ComponentsSwarmModule,
     DreamRoutingModule,
-    HttpModule
+    HttpModule,
+
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'he-IL' },

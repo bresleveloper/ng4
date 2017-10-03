@@ -37,10 +37,11 @@ NgCf : angular client forms platform, simple server side setting and you have al
 installed angular material from `https://material.angular.io`, so that means
 
 `npm install --save @angular/material @angular/cdk`
-
 `npm install --save angular/material2-builds angular/cdk-builds`
+`npm install --save hammerjs`
 
-and aninations
+and animations
+
 `npm install --save @angular/animations`
 
 ## last-build, next build

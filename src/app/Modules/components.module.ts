@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { MaterialArmadaModule } from '../Modules/material.module';
@@ -25,7 +26,7 @@ import { MsdnProductsService } from '../Services/msdn-products-extends.service';
   
   ],
 
-  imports:[MaterialArmadaModule, BrowserModule],
+  imports:[MaterialArmadaModule, BrowserModule, FormsModule],
 
   providers:[
     MsdnProductsService

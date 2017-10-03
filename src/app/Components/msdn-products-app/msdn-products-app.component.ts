@@ -19,6 +19,14 @@ export class MsdnProductsAppComponent implements OnInit {
     this.l('MsdnProductsAppComponent init');
   }
 
+  SeachById(pid){
 
+    //var self = this;
+
+    this.svc.Get(pid)
+      .then( (p) => {
+        
+      })
+  }
 
 }

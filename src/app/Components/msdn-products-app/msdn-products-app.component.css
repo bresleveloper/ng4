@@ -1,9 +1,24 @@
 
-md-grid-list{
-    width: 600px;
+mat-grid-list{
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-md-grid-tile {
+mat-grid-tile {
     background: lightblue;
-  }
+}
   
+/*:host /deep/ figure { flex-direction: column; }*/
+/*/deep/ figure { flex-direction: column; }*/
+>>> figure { flex-direction: column; }
+
+mat-form-field { width: 100px }
+>>> .mat-input-infix.mat-form-field-infix { display: inline-flex; align-items: baseline;}
+
+>>> .mat-icon-button{
+    line-height: 24px;
+    height: 24px;
+    width: 24px; 
+}
+
+mat-card{display: inline-block;}
