@@ -13,7 +13,7 @@ export class MsdnProductsAppComponent implements OnInit {
 
   l = console.log.bind(console);
 
-  constructor(private svc:MsdnProductsService) { }
+  constructor(public svc:MsdnProductsService) { }
 
   ngOnInit() {
     this.l('MsdnProductsAppComponent init');
