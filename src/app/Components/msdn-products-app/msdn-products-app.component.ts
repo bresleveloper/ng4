@@ -12,7 +12,8 @@ import { MsdnProductsService } from '../../Services/msdn-products-extends.servic
 export class MsdnProductsAppComponent implements OnInit {
 
   l = console.log.bind(console);
-
+  PID;
+  pfilter;
   constructor(public svc:MsdnProductsService) { }
 
   ngOnInit() {
