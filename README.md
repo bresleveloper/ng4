@@ -1,8 +1,8 @@
 # My Dream App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
-So its their "fault" i named my project my-dream-app<br>
-But then again, thats should be the point here, to show my dreamy ideas and that i can achieve them all
+So its their "fault" i named my project my-dream-app.<br>
+But then again, thats should be the point here, to show my dreamy ideas and that i can achieve them all.
 
 ## My Show Case
 
@@ -42,9 +42,12 @@ carousel:<br/>
 `npm i --save angular4-carousel`<br/>
 note changes i made in the carousel :[issue 23](https://github.com/bonjurmrfirst/angular4-carousel/issues/23)
 
+for wrapping UI i took the UI from [material's example-viewer](https://github.com/angular/material.angular.io/tree/master/src/app/shared/example-viewer)
+
+
 ## last-build, next build
 last build::<br/>
-carousel<br/>
+2 home component<br/>
 
 next::<br/>
-a static thing like jobs opportunities
+birthday slider

@@ -13,6 +13,8 @@ import { DreamAboutComponent } from '../Pages/dream-about/dream-about.component'
 import { DreamClockComponent } from '../Components/dream-clock/dream-clock.component';
 import { MaterialDatepickerComponent } from '../Components/material-datepicker/material-datepicker.component';
 import { MsdnProductsAppComponent } from '../Components/msdn-products-app/msdn-products-app.component';
+import { JobOffersComponent } from '../Components/job-offers/job-offers.component';
+import { ComponentWrapperComponent } from '../Components/component-wrapper/component-wrapper.component';
 
 import { MsdnProductsService } from '../Services/msdn-products-extends.service';
 
@@ -26,6 +28,8 @@ import { MsdnProductsService } from '../Services/msdn-products-extends.service';
     DreamClockComponent,
     MaterialDatepickerComponent,
     MsdnProductsAppComponent,
+    JobOffersComponent, 
+    ComponentWrapperComponent,
   ],
 
   imports:[

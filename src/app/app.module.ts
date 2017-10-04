@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { LOCALE_ID } from '@angular/core'; 
+import 'hammerjs';
 import { MaterialArmadaModule } from './Modules/material.module';
 import { ComponentsSwarmModule } from './Modules/components.module';
 import { DreamRoutingModule } from './Modules/dream-routing.module';
@@ -12,12 +13,11 @@ import { DreamRoutingModule } from './Modules/dream-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './Components/navigation/navigation.component';
 
-import 'hammerjs';
 
 @NgModule({
   declarations: [
     AppComponent, 
-    NavigationComponent, 
+    NavigationComponent 
   ],
   imports: [
     BrowserAnimationsModule,

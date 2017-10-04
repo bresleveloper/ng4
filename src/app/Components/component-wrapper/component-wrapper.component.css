@@ -1,0 +1,32 @@
+:host {margin: 15px;}
+
+.docs-example-viewer-wrapper {
+    border: 1px solid rgba(0,0,0,.03);
+    box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+}
+  
+.docs-example-viewer-title {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 8px 20px;
+
+    color: rgba(0,0,0,.54);
+    background: rgba(0,0,0,.03);
+}
+  
+.docs-example-viewer-title-spacer {
+    flex: 1 1 auto;
+    font-family: Helvetica,Arial,Lucida Grande,sans-serif;
+    text-align: start;
+}
+  
+.docs-example-viewer-body {padding: 30px;}
+
+
+@media screen and (max-width: 600px){
+    .docs-example-viewer-body {padding: 15px;}
+}
+
+>>> .example-container{min-width: 100% !important}
