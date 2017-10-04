@@ -2,14 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
+import { NgPipesModule } from 'ngx-pipes';
+import { CarouselModule } from 'angular4-carousel';
+
 import { MaterialArmadaModule } from '../Modules/material.module';
 
 import { DreamHomeComponent } from '../Pages/dream-home/dream-home.component';
 import { DreamAboutComponent } from '../Pages/dream-about/dream-about.component';
 
-import { MsdnProductsAppComponent } from '../Components/msdn-products-app/msdn-products-app.component';
 import { DreamClockComponent } from '../Components/dream-clock/dream-clock.component';
 import { MaterialDatepickerComponent } from '../Components/material-datepicker/material-datepicker.component';
+import { MsdnProductsAppComponent } from '../Components/msdn-products-app/msdn-products-app.component';
 
 import { MsdnProductsService } from '../Services/msdn-products-extends.service';
 
@@ -20,13 +23,18 @@ import { MsdnProductsService } from '../Services/msdn-products-extends.service';
     DreamAboutComponent,
 
     //components
-    MsdnProductsAppComponent,
     DreamClockComponent,
     MaterialDatepickerComponent,
-  
+    MsdnProductsAppComponent,
   ],
 
-  imports:[MaterialArmadaModule, BrowserModule, FormsModule],
+  imports:[
+    BrowserModule, 
+    FormsModule, 
+    MaterialArmadaModule, 
+    NgPipesModule,
+    CarouselModule,
+  ],
 
   providers:[
     MsdnProductsService

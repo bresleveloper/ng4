@@ -15,7 +15,10 @@ import { NavigationComponent } from './Components/navigation/navigation.componen
 import 'hammerjs';
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent],
+  declarations: [
+    AppComponent, 
+    NavigationComponent, 
+  ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,

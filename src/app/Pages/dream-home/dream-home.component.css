@@ -1,0 +1,4 @@
+>>> carousel-arrows .material-icons{font-size: 124px}
+
+>>> i.fa.fa-angle-left.carousel-nav__btn.carousel-nav__btn--left{left:-30px}
+>>> i.fa.fa-angle-right.carousel-nav__btn.carousel-nav__btn--right{right:-30px}

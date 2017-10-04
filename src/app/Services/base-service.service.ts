@@ -30,8 +30,8 @@ export class BaseDreamService {
         },    
         function MsdnProductsService_Get_Error(msg) { // Error
           console.error('Get (' + url + ') Error');
-          console.error(msg.json().Message);
-          reject(msg.json().Message);
+          console.error(msg);
+          reject(msg.status + '' + msg.statusText);
         });
     });
     return promise;

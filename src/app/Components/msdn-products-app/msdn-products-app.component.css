@@ -22,3 +22,9 @@ mat-form-field { width: 100px }
 }
 
 mat-card{display: inline-block;}
+
+.filter{
+    margin-top: 30px;
+}
+
+.filter mat-form-field {width: 200px}

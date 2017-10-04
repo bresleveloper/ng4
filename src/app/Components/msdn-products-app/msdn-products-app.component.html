@@ -4,23 +4,26 @@
 </h3>
 
 <h4>Search by ID</h4>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
+<form>
+  <mat-form-field>
     <input matInput placeholder="ID" [(ngModel)]="PID" name="pid" >
     <button mat-icon-button (click)="SeachById(PID)" ><mat-icon>search</mat-icon></button>
   </mat-form-field>
 
   <div>
-    <mat-card>
-      <mat-card-title>results products</mat-card-title>
-      <mat-card-subtitle>Category</mat-card-subtitle>
-      <mat-card-content>should be hidden b4 search</mat-card-content>
+    <mat-card *ngIf="searchedProduct">
+      <mat-card-title>{{ searchedProduct.Name }}</mat-card-title>
+      <mat-card-subtitle>{{ searchedProduct.Category }}</mat-card-subtitle>
+      <mat-card-content>{{ searchedProduct.Price }}</mat-card-content>
     </mat-card>  
   </div>
       
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="filter by name" [(ngModel)]="pfilter" name="pfilter" >
+  <div class="filter">
+    <mat-form-field>
+      <input matInput placeholder="filter by name" [(ngModel)]="pfilter" name="pfilter" >
+      <mat-icon>filter_list</mat-icon>
   </mat-form-field>
+  </div>
 
 </form>
 
@@ -28,10 +31,10 @@
 <h4>All Products</h4>
 
 <mat-grid-list cols="3" rowHeight="1.5:1">
-  <mat-grid-tile *ngFor="let p of svc.products" > 
-      <h4>{{ p.Category }} </h4>
-      <span>&rarr; {{ p.Name }} &larr;</span>
-      <span>{{ p.Price }} $</span>
+  <mat-grid-tile *ngFor="let p of svc.products | filterBy: ['Name', 'Category']: pfilter" >
+    <h4>{{ p.Category }} </h4>
+    <span>&rarr; {{ p.Name }} &larr;</span>
+    <span>{{ p.Price }} $</span>
   </mat-grid-tile>
 </mat-grid-list>
 

@@ -3,13 +3,15 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 So its their "fault" i named my project my-dream-app
 
-## My Show Case
 
 But then again, thats should be the point here, to show my dreamy ideas and that i can achieve them all
 
-Take a look in my Blog https://bresleveloper.blogspot.co.il/
+## My Show Case
 
-Take at the app https://bresleveloper.github.io/ng4/
+The App 
+### [My Dream App](https://bresleveloper.github.io/ng4/)
+My Blog 
+### [Bresleveloper](https://bresleveloper.blogspot.co.il/)
 
 ## Road Map
 
@@ -36,19 +38,20 @@ NgCf : angular client forms platform, simple server side setting and you have al
 ## Some Documentation
 installed angular material from `https://material.angular.io`, so that means
 
-`npm install --save @angular/material @angular/cdk`
-`npm install --save angular/material2-builds angular/cdk-builds`
-`npm install --save hammerjs`
-
-and animations
-
-`npm install --save @angular/animations`
+`npm install --save @angular/material @angular/cdk`<br/>
+`npm install --save angular/material2-builds angular/cdk-builds`<br/>
+`npm install --save hammerjs`<br/>
+animations: <br/>
+`npm install --save @angular/animations`<br/>
+awesome pipes: <br/>
+`npm install ngx-pipes --save `
+carousel:<br/>
+`npm i --save angular4-carousel`<br/>
+note changes i made in the carousel :[issue 23](https://github.com/bonjurmrfirst/angular4-carousel/issues/23)
 
 ## last-build, next build
-last build::
+last build::<br/>
+carousel<br/>
 
-breaking app into modules, using service, inheriting service, routing.
-
-next::
-
-after blogging all that, do UI
+next::<br/>
+a static thing like jobs opportunities

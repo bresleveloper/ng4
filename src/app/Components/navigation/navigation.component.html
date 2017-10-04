@@ -1,3 +1,5 @@
+
+<!-- Navigation start -->
 <button mat-button routerLink="/Home" routerLinkActive="active" >
   <mat-icon aria-hidden="true">home</mat-icon>
   <span>Home</span>
@@ -6,13 +8,27 @@
   <mat-icon aria-hidden="true">info</mat-icon>
   <span>About</span>
 </button>
+
+<button mat-button [matMenuTriggerFor]="exampleApps">Example Apps</button>
+
 <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
+<!-- Navigation end -->
+
+
+
+
+<!-- Example Apps start -->
+<mat-menu #exampleApps="matMenu">
+    <button mat-menu-item routerLink="/msdn-product-app" routerLinkActive="active">msdn product app</button>
+    <button mat-menu-item >fire base</button>
+  </mat-menu>
+<!-- Example Apps end -->
 
 
 
 <mat-menu #animals="matMenu">
-  <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
-  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+    <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+    <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
 </mat-menu>
 
 <mat-menu #vertebrates="matMenu">
