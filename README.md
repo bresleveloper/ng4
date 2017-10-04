@@ -1,9 +1,7 @@
 # My Dream App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
-So its their "fault" i named my project my-dream-app
-
-
+So its their "fault" i named my project my-dream-app<br>
 But then again, thats should be the point here, to show my dreamy ideas and that i can achieve them all
 
 ## My Show Case
@@ -19,17 +17,12 @@ So for now, i want this to be a standard show case with all standard elements an
 
 ## Pages to Build
 
-Master, *MegaMenu* (fixed), Home (slider, static msgs, live msgs, birthdays), Animations, Articles, Search, About, Contact (form)
-
-Home - Slider / static + feed / birthday long low
-
-Articles - list / Search - list / Article - item
-
-Animations page
-
-connect to API - my server app, Firebase
-
-About / Contact (form)
+Master, *MegaMenu* (fixed), Home (slider, static msgs, live msgs, birthdays), Animations, Articles, Search, About, Contact (form)<br>
+Home - Slider / static + feed / birthday long low<br>
+Articles - list / Search - list / Article - item<br>
+Animations page<br>
+connect to API - my server app, Firebase<br>
+About / Contact (form)<br>
 
 ## Da Dream
 
