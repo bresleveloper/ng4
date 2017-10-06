@@ -22,6 +22,7 @@ export class DreamHomeComponent implements OnInit, AfterViewInit {
     },
     { 
       src : 'https://cdn.tinybuddha.com/wp-content/uploads/2015/06/Boy-Reaching-for-Stars.png',
+      html:''
     },
     { 
       src : 'https://az616578.vo.msecnd.net/files/2016/07/01/636029949024208563265850935_Dreeeamy.jpg',

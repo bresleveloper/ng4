@@ -1,18 +1,19 @@
->>> carousel-arrows .material-icons{font-size: 124px}
-
->>> i.fa.fa-angle-left.carousel-nav__btn.carousel-nav__btn--left{left:-30px}
->>> i.fa.fa-angle-right.carousel-nav__btn.carousel-nav__btn--right{right:-30px}
-
+.bannerStyle h1 {
+    background-color: #ccc;
+    min-height: 300px;
+    text-align: center;
+    line-height: 300px;
+}
 
 
 .flexy {display: flex; justify-content: space-around;}
 
-.flexy-fill {display: flex; justify-content: space-between; }
+.flexy-fill-2 {display: flex; justify-content: space-between; }
 
-.flexy-fill > * { width: 49%; }
+.flexy-fill-2 > * { width: 49%; }
 
 
 @media screen and (max-width: 600px){
-    .flexy-fill { flex-direction: column; }
-    .flexy-fill > * { width: 100%; }
+    .flexy-fill-2 { flex-direction: column; }
+    .flexy-fill-2 > * { width: 100%; }
 }

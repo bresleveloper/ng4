@@ -39,15 +39,20 @@ animations: <br/>
 awesome pipes: <br/>
 `npm install ngx-pipes --save `
 carousel:<br/>
-`npm i --save angular4-carousel`<br/>
-note changes i made in the carousel :[issue 23](https://github.com/bonjurmrfirst/angular4-carousel/issues/23)
+`npm install ngx-carousel --save`<br/>
+firebase for "online help" component:<br/>
+`npm install angularfire2 firebase --save`<br/>
+p.s. firebase is evolving, [Angular 4 upgrade](https://github.com/angular/angularfire2/blob/master/docs/version-4-upgrade.md) and [firebase 5.0.0 changelog](https://github.com/angular/angularfire2/blob/master/CHANGELOG.md)<br/>
+**moved back to fb 4.0.0 (` angularfire2@4.0.0-rc.2 --save`) since i couldn't fince sln for `core.es5.js:1020 ERROR Error: Uncaught (in promise): Error: No provider for AngularFireDatabase!`<br/>
+old values `"angularfire2": "^5.0.0-rc.2",`, `"firebase": "^4.5.0",` test `npm list angularfire2/firebase`
 
 for wrapping UI i took the UI from [material's example-viewer](https://github.com/angular/material.angular.io/tree/master/src/app/shared/example-viewer)
 
 
 ## last-build, next build
 last build::<br/>
-2 home component<br/>
+adding angular fire module and service<br/>
 
 next::<br/>
-birthday slider
+need to apply login, logout, add msg of ngfire<br>
+birthday slider, will be implemented with https://sheikalthaf.github.io/ngx-carousel/

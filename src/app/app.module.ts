@@ -13,20 +13,20 @@ import { DreamRoutingModule } from './Modules/dream-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './Components/navigation/navigation.component';
 
-
 @NgModule({
   declarations: [
     AppComponent, 
-    NavigationComponent 
+    NavigationComponent,  
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    HttpModule,
 
+    
     MaterialArmadaModule,
     ComponentsSwarmModule,
     DreamRoutingModule,
-    HttpModule,
 
   ],
   providers: [
