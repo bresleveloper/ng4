@@ -86,5 +86,14 @@ export class DreamHomeComponent implements OnInit {
 
   }
 
-
+  public carouselTileLoad(evt: any) {
+    
+        /*const len = this.carouselBannerItems.length
+        if (len <= 10) {
+          for (let i = len; i < len + 10; i++) {
+            this.carouselBannerItems.push(i);
+          }
+        }*/
+    
+      }
 }

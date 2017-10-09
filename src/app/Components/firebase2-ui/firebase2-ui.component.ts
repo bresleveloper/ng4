@@ -9,7 +9,7 @@ import { Firebase2Service } from '../../Services/firebase2.service';
 })
 export class Firebase2UiComponent implements OnInit {
 
-  @Input() private mode: string;
+  @Input() public mode: string;
 
   constructor(fb2s:Firebase2Service) {}
 
