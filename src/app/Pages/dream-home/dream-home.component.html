@@ -1,8 +1,26 @@
 <h2>Welcome to Dream Home</h2>
 
 
-<div style="width: 100%; height: 400px">
-  <carousel #carousel [sourcesHtml]="imageWithHtmlSources" [config]="config"></carousel>
+<div class="main-slider"  [style.background-color]="'green'"  >
+  <ngx-carousel  
+  [inputs]="carouselBanner" 
+  (carouselLoad)="carouselBannerLoad($event)">
+
+      <ngx-item NgxCarouselItem class="bannerStyle" *ngFor="let Banner of carouselBannerItems; let i = index">
+          <div class="slide-html">
+              <h3>Go Find What you Love to do {{ i + 10 }}</h3>
+              <p>
+                yes you should do that it will make you happy believe me i love you
+                <br><br>
+                <a href="#">read more...</a>
+              </p>
+          </div>
+          <img src="{{Banner}}"/>
+      </ngx-item>
+
+      <button NgxCarouselPrev class='leftRs'>&lt;</button>
+      <button NgxCarouselNext class='rightRs'>&gt;</button>
+  </ngx-carousel>
 </div>
 
 
@@ -21,6 +39,20 @@
   </div>
 </div>
 
-<div>Here should be another slider for birthdays, pics and dates and mailto</div>
+<div class="birthdays box-border">
+  <ngx-carousel 
+    [inputs]="carouselTile" 
+    (carouselLoad)="carouselTileLoad($event)">
 
+          <ngx-tile NgxCarouselItem *ngFor="let Tile of carouselTileItems">
+              <h1>{{Tile + 1}} - Jhon Doe</h1>
+              <a href="mailto:example.birthday@gmail.com?Subject=Happy%20Birthday" target="_blank"><img src="../../../assets/person-flat.png" /></a>
+          </ngx-tile>
+
+        <button NgxCarouselPrev class='leftRs'>&lt;</button>
+        <button NgxCarouselNext class='rightRs'>&gt;</button>
+  </ngx-carousel>
+</div>
+
+<div style="height:100px"></div>
 

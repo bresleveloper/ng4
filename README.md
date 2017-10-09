@@ -40,6 +40,8 @@ awesome pipes: <br/>
 `npm install ngx-pipes --save `
 carousel:<br/>
 `npm install ngx-carousel --save`<br/>
+
+
 firebase for "online help" component:<br/>
 `npm install angularfire2 firebase --save`<br/>
 p.s. firebase is evolving, [Angular 4 upgrade](https://github.com/angular/angularfire2/blob/master/docs/version-4-upgrade.md) and [firebase 5.0.0 changelog](https://github.com/angular/angularfire2/blob/master/CHANGELOG.md)<br/>
@@ -51,8 +53,8 @@ for wrapping UI i took the UI from [material's example-viewer](https://github.co
 
 ## last-build, next build
 last build::<br/>
-adding angular fire module and service<br/>
+adding ngx-carousel for banner and birthdays<br/>
 
 next::<br/>
+get to set slider to 98vw with computed margin-left<br>
 need to apply login, logout, add msg of ngfire<br>
-birthday slider, will be implemented with https://sheikalthaf.github.io/ngx-carousel/

@@ -1,68 +1,90 @@
-import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, ViewContainerRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { ICarouselConfig, AnimationConfig, CarouselService  } from 'angular4-carousel';
+import { NgxCarousel } from 'ngx-carousel';
 
 @Component({
   selector: 'dream-home',
   templateUrl: './dream-home.component.html',
   styleUrls: ['./dream-home.component.css']
 })
-export class DreamHomeComponent implements OnInit, AfterViewInit {
-
-  public imageSources: string[] = [
-    'https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAx6AAAAJGRmZDRjNzMyLThmODQtNDljZi1iMWU2LWVmYTFjZWZhYjZjMg.jpg',
-    'https://cdn.tinybuddha.com/wp-content/uploads/2015/06/Boy-Reaching-for-Stars.png',
-    'https://az616578.vo.msecnd.net/files/2016/07/01/636029949024208563265850935_Dreeeamy.jpg'
-  ];
-  
-  public imageWithHtmlSources = [
-    { 
-      src : 'https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAx6AAAAJGRmZDRjNzMyLThmODQtNDljZi1iMWU2LWVmYTFjZWZhYjZjMg.jpg',
-      html: '<h3>Go Find God</h3><p>yes you should do that it will make you happy believe me i love you<br><br><a href="#">read more...</a></p>'
-    },
-    { 
-      src : 'https://cdn.tinybuddha.com/wp-content/uploads/2015/06/Boy-Reaching-for-Stars.png',
-      html:''
-    },
-    { 
-      src : 'https://az616578.vo.msecnd.net/files/2016/07/01/636029949024208563265850935_Dreeeamy.jpg',
-      html: '<h3>Trees</h3><p>r pretty :)</p>'
-    },
-    { 
-      src : 'https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAx6AAAAJGRmZDRjNzMyLThmODQtNDljZi1iMWU2LWVmYTFjZWZhYjZjMg.jpg',
-      html: '<h3>Carousel Upgrade</h3><p>I made some fixes, can be seen in <a target="_blank" href="https://github.com/bonjurmrfirst/angular4-carousel/issues/23">this issue request</a></p>'
-    },
-  ];
-  
-  public config: ICarouselConfig = {
-    verifyBeforeLoad: true,
-    log: false,
-    animation: true,
-    animationType: AnimationConfig.APPEAR,
-    autoplay: true,
-    autoplayDelay: 2000,
-    stopAutoplayMinWidth: 768
-  };
-  
-
-  constructor(private carouselSvc: CarouselService) {}
-
-  @ViewChild('carousel', {read: ViewContainerRef}) carousel;
-  
-  ngOnInit() {}
-  
-  ngAfterViewInit() {
-    this.carouselSvc.onImageLoad().subscribe(
-      (src) => console.log(src + ' - loaded'),
-      (src) => console.log(src + ' - error'),
-      () => {
-        console.log('all imgs loaded');
-        let arrows = this.carousel.element.nativeElement.querySelectorAll('carousel-arrows i');
-        arrows[0].innerHTML = '<i class="material-icons">keyboard_arrow_left</i>';
-        arrows[1].innerHTML = '<i class="material-icons">keyboard_arrow_right</i>';
-
-      }
-    );//end onImageLoad
+export class DreamHomeComponent implements OnInit {
+  constructor() {
+    var w = window.innerWidth;
+    var b = window.document.body.offsetWidth;
+    this.marginLeftSliderValue = ((w-b)/2.25)*-1;
   }
+
+  public carouselBannerItems: Array<any>;
+  public carouselBanner: NgxCarousel;
+
+  public carouselTileItems: Array<any>;
+  public carouselTile: NgxCarousel;
+
+  public marginLeftSliderValue;
+
+  marginLeftSlider(){
+    var w = window.innerWidth;
+    var b = window.document.body.offsetWidth;
+    return ((w-b)/2.25)*-1;
+  }
+
+  marginLeftSliderStyle(){
+    return "'margin-left:" + this.marginLeftSlider() + "'";
+  }
+
+  ngOnInit(){
+
+    /* ***** Main Slider ***** */
+
+    //this.carouselBannerItems = [0, 1, 2, 3, 4];
+    this.carouselBannerItems = [
+      'https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAx6AAAAJGRmZDRjNzMyLThmODQtNDljZi1iMWU2LWVmYTFjZWZhYjZjMg.jpg',
+      'https://cdn.tinybuddha.com/wp-content/uploads/2015/06/Boy-Reaching-for-Stars.png',
+      'https://az616578.vo.msecnd.net/files/2016/07/01/636029949024208563265850935_Dreeeamy.jpg'
+    ];
+
+    this.carouselBanner = {
+      grid: {xs: 1, sm: 1, md: 1, lg: 1, all: 0},
+      slide: 1,
+      speed: 400,
+      interval: 4000,
+      point: true,
+      load: 2,
+      loop: true,
+      custom: 'banner',
+      touch: true,
+      dynamicLength:false
+    }
+
+
+    /* ***** Birthdays ***** */
+    this.carouselTileItems = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+    
+    this.carouselTile = {
+      grid: {xs: 2, sm: 3, md: 3, lg: 5, all: 0},
+      slide: 2,
+      speed: 400,
+      animation: 'lazy',
+      point: true,
+      load: 2,
+      touch: true,
+      easing: 'ease',
+      dynamicLength:false
+      
+    }
+
+  }
+
+  public carouselBannerLoad(evt: any) {
+
+    /*const len = this.carouselBannerItems.length
+    if (len <= 10) {
+      for (let i = len; i < len + 10; i++) {
+        this.carouselBannerItems.push(i);
+      }
+    }*/
+
+  }
+
 
 }
