@@ -20,7 +20,7 @@ import { DreamHomeComponent } from '../Pages/dream-home/dream-home.component';
 import { DreamAboutComponent } from '../Pages/dream-about/dream-about.component';
 
 //my dream app components
-import { DreamClockComponent } from '../Components/dream-clock/dream-clock.component';
+import { DreamClockComponent, ZeroPipe } from '../Components/dream-clock/dream-clock.component';
 import { MaterialDatepickerComponent } from '../Components/material-datepicker/material-datepicker.component';
 import { MsdnProductsAppComponent } from '../Components/msdn-products-app/msdn-products-app.component';
 import { ComponentWrapperComponent } from '../Components/component-wrapper/component-wrapper.component';
@@ -37,7 +37,7 @@ import { FireBaseUIMessageDialog } from '../Components/firebase2-ui/dialogs/mess
     DreamAboutComponent,
 
     //components
-    DreamClockComponent,
+    DreamClockComponent, ZeroPipe,
     MaterialDatepickerComponent,
     MsdnProductsAppComponent,
     ComponentWrapperComponent,

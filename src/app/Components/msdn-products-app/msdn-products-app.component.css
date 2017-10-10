@@ -1,15 +1,8 @@
 
-mat-grid-list{
-    max-width: 600px;
-    margin: 0 auto;
-}
+mat-grid-list{max-width: 600px;margin: 0 auto;}
 
-mat-grid-tile {
-    background: lightblue;
-}
+mat-grid-tile {background: lightblue;}
   
-/*:host /deep/ figure { flex-direction: column; }*/
-/*/deep/ figure { flex-direction: column; }*/
 >>> figure { flex-direction: column; }
 
 mat-form-field { width: 100px }
@@ -23,8 +16,9 @@ mat-form-field { width: 100px }
 
 mat-card{display: inline-block;}
 
-.filter{
-    margin-top: 30px;
-}
-
+.filter{margin-top: 30px;}
 .filter mat-form-field {width: 200px}
+
+@media screen and (max-width: 600px){
+    >>> figure h4 { margin: 5px 0 }
+}

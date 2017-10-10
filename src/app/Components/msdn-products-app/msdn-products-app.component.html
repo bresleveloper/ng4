@@ -30,8 +30,15 @@
 
 <h4>All Products</h4>
 
-<mat-grid-list cols="3" rowHeight="1.5:1">
-  <mat-grid-tile *ngFor="let p of svc.products | filterBy: ['Name', 'Category']: pfilter" >
+<ng-template #loading>
+  Loading Products<br>
+  <img src="https://raw.githubusercontent.com/bresleveloper/ng4/master/src/assets/ajax-loader.gif" />
+</ng-template>
+
+<mat-grid-list cols="3" rowHeight="1.5:1" 
+*ngIf="svc.products && svc.products.length && svc.products.length > 0; else loading">
+
+<mat-grid-tile *ngFor="let p of svc.products | filterBy: ['Name', 'Category']: pfilter" >
     <h4>{{ p.Category }} </h4>
     <span>&rarr; {{ p.Name }} &larr;</span>
     <span>{{ p.Price }} $</span>

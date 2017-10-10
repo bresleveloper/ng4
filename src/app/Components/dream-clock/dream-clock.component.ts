@@ -37,3 +37,13 @@ export class DreamClockComponent implements OnDestroy {
     }, 1000);//end set intervals
   }//end ctor
 }//end class
+
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({name: 'zero'})
+export class ZeroPipe implements PipeTransform {
+  transform(value: any): any {
+    let intVal = parseInt(value, 10);
+    return intVal < 10 ? '0' + value : value;
+  }
+}

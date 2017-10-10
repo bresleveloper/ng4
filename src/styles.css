@@ -12,6 +12,9 @@ purple-green.css
 html { overflow-y: scroll}
 
 body { max-width: 80%; margin: 0 auto; text-align: center; }
+@media screen and (max-width: 600px){
+    body { max-width: 95%;}
+}
 
 div {text-align:center}
 
@@ -21,3 +24,26 @@ div {text-align:center}
 }
 
 
+
+
+/* material table  */
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+}
+
+.mat-table {
+    overflow: auto;
+    max-height: 500px;
+}
+
+@media screen and (max-width: 600px){
+    .docs-example-viewer-title{    flex-direction: column;}
+    .docs-example-viewer-title-spacer{align-self: flex-start}
+
+
+    .mat-table { max-height: 300px; }
+    .mat-header-row, .mat-row{padding: 12px;}
+}

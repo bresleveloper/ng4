@@ -30,6 +30,10 @@
 >>> .birthdays .item:hover img {opacity: 1}
 >>> .birthdays .item:hover h4 {opacity: 0.2}
 
+>>> @media screen and (max-width: 600px){
+    >>> .birthdays div.item  {width: 33.3%}
+}
+
 
 
 .flexy {display: flex; justify-content: space-around;}
