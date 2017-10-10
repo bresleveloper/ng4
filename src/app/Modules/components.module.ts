@@ -26,7 +26,8 @@ import { MsdnProductsAppComponent } from '../Components/msdn-products-app/msdn-p
 import { ComponentWrapperComponent } from '../Components/component-wrapper/component-wrapper.component';
 import { JobOffersComponent } from '../Components/job-offers/job-offers.component';
 import { HelpGroupComponent } from '../Components/help-group/help-group.component';
-import { Firebase2UiComponent } from '../Components/firebase2-ui/firebase2-ui.component';
+import { Firebase2UiComponent, FireBaseUILoginDialog } from '../Components/firebase2-ui/firebase2-ui.component';
+import { FireBaseUIMessageDialog } from '../Components/firebase2-ui/dialogs/message/message.component';
 
 
 @NgModule({
@@ -42,8 +43,11 @@ import { Firebase2UiComponent } from '../Components/firebase2-ui/firebase2-ui.co
     ComponentWrapperComponent,
     JobOffersComponent, 
     HelpGroupComponent,
-    Firebase2UiComponent,
+    Firebase2UiComponent, FireBaseUILoginDialog,FireBaseUIMessageDialog
+
   ],
+
+  entryComponents: [FireBaseUILoginDialog,FireBaseUIMessageDialog],
 
   imports:[
     BrowserModule, 

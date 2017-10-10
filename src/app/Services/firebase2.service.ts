@@ -10,14 +10,24 @@ import * as firebase from 'firebase/app'
 export class Firebase2Service {
     user: Observable<firebase.User>;
     items: FirebaseListObservable<any[]>;
+    itemsHelpRequests: FirebaseListObservable<any[]>;
     msgVal: string = '';
 
     constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase){
         this.items = af.list('/messages', {
-        query: {
-            limitToLast: 50
-        }
+            query: {
+                limitToLast: 50
+            }
         });//end af
+
+        /*this.itemsHelpRequests = af.list('/helpRequests', {
+            query: {
+                limitToLast: 50,
+                orderByChild: 'date'
+            }
+        }).map( (arr) => { return arr.reverse(); } ) as FirebaseListObservable<any[]>;*/
+        this.itemsHelpRequests = af.list('/helpRequests');
+
         this.user = this.afAuth.authState;
         console.log('Firebase2Service constructor done')
     }//end ctor
@@ -26,9 +36,7 @@ export class Firebase2Service {
         this.afAuth.auth.signInAnonymously()
             .catch(function(error){
                 var errorMessage = error.message;
-
                 var errJ = JSON.parse(errorMessage)
-
                 console.log(errJ);
             });
     }
@@ -40,6 +48,10 @@ export class Firebase2Service {
     Send(desc: string){
         this.items.push({ message: desc });
         this.msgVal = '';
+    }
+
+    SendHelpRequest(name: string, msg: string){
+        this.itemsHelpRequests.push({ name: name, date:Date.now(), message: msg });
     }
 
 }

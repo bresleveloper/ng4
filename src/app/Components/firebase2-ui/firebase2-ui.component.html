@@ -1,5 +1,25 @@
   <div *ngIf="mode == 'title'">
-    <button mat-icon-button><mat-icon>lock_open</mat-icon></button>
-    <button mat-icon-button><mat-icon>lock_outline</mat-icon></button>
-    <button mat-icon-button><mat-icon>message</mat-icon></button>
+
+    <div *ngIf="!(fb2s.user | async)?.uid">
+      <button mat-icon-button title="Anonymous Login" matTooltip="Anonymous Login" (click)="login()"  >
+        <mat-icon>lock_outline</mat-icon>
+      </button>
+    </div>
+
+    <div *ngIf="(fb2s.user | async)?.uid">
+        
+      <span>Hi, {{name}}</span>
+
+      <button mat-icon-button title="Logout" matTooltip="Logout" (click)="fb2s.logout()">
+          <mat-icon>lock_open</mat-icon>
+        </button>
+  
+      <button mat-icon-button title="Ask for help..."  matTooltip="Ask for help..." (click)="message()" >
+        <mat-icon class="message-icon">message</mat-icon>
+      </button>
+
+    </div>
+
+    <mat-icon class="info-icon" matTooltip="Open another Browser with this link and login and post a message to see it pops here Live">info</mat-icon>
+
   </div>

@@ -10,3 +10,7 @@
     max-height: 500px;
   }
   
+
+ .cdk-column-message.mat-column-message {
+    flex-grow: 4;
+}

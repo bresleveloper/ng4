@@ -1,1 +1,4 @@
 >>> .mat-icon-button{line-height: 20px; height: 20px; margin-top: -1px;}
+
+:host {position: relative; margin-right: 20px;}
+:host .info-icon{position: absolute;     right: -35px;top: -1px;}

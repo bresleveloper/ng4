@@ -8,11 +8,7 @@ import { NgxCarousel } from 'ngx-carousel';
   styleUrls: ['./dream-home.component.css']
 })
 export class DreamHomeComponent implements OnInit {
-  constructor() {
-    var w = window.innerWidth;
-    var b = window.document.body.offsetWidth;
-    this.marginLeftSliderValue = ((w-b)/2.25)*-1;
-  }
+  constructor() {}
 
   public carouselBannerItems: Array<any>;
   public carouselBanner: NgxCarousel;
@@ -20,16 +16,10 @@ export class DreamHomeComponent implements OnInit {
   public carouselTileItems: Array<any>;
   public carouselTile: NgxCarousel;
 
-  public marginLeftSliderValue;
-
   marginLeftSlider(){
     var w = window.innerWidth;
     var b = window.document.body.offsetWidth;
-    return ((w-b)/2.25)*-1;
-  }
-
-  marginLeftSliderStyle(){
-    return "'margin-left:" + this.marginLeftSlider() + "'";
+    return ((w-b)/2.12)*-1;
   }
 
   ngOnInit(){
@@ -46,7 +36,7 @@ export class DreamHomeComponent implements OnInit {
     this.carouselBanner = {
       grid: {xs: 1, sm: 1, md: 1, lg: 1, all: 0},
       slide: 1,
-      speed: 400,
+      speed: 800,
       interval: 4000,
       point: true,
       load: 2,
@@ -58,12 +48,12 @@ export class DreamHomeComponent implements OnInit {
 
 
     /* ***** Birthdays ***** */
-    this.carouselTileItems = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+    this.carouselTileItems = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
     
     this.carouselTile = {
-      grid: {xs: 2, sm: 3, md: 3, lg: 5, all: 0},
-      slide: 2,
-      speed: 400,
+      grid: {xs: 2, sm: 3, md: 3, lg: 8, all: 0},
+      slide: 6,
+      speed: 800,
       animation: 'lazy',
       point: true,
       load: 2,
@@ -76,24 +66,20 @@ export class DreamHomeComponent implements OnInit {
   }
 
   public carouselBannerLoad(evt: any) {
-
     /*const len = this.carouselBannerItems.length
     if (len <= 10) {
       for (let i = len; i < len + 10; i++) {
         this.carouselBannerItems.push(i);
       }
     }*/
-
   }
 
   public carouselTileLoad(evt: any) {
-    
-        /*const len = this.carouselBannerItems.length
-        if (len <= 10) {
-          for (let i = len; i < len + 10; i++) {
-            this.carouselBannerItems.push(i);
-          }
-        }*/
-    
+    /*const len = this.carouselBannerItems.length
+    if (len <= 10) {
+      for (let i = len; i < len + 10; i++) {
+        this.carouselBannerItems.push(i);
       }
+    }*/
+  }
 }

@@ -53,8 +53,7 @@ for wrapping UI i took the UI from [material's example-viewer](https://github.co
 
 ## last-build, next build
 last build::<br/>
-adding ngx-carousel for banner and birthdays<br/>
+added FireBase (Messages)<br/>
 
 next::<br/>
-get to set slider to 98vw with computed margin-left<br>
-need to apply login, logout, add msg of ngfire<br>
+too late to think about that ...

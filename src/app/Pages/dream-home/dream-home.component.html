@@ -1,7 +1,7 @@
 <h2>Welcome to Dream Home</h2>
 
 
-<div class="main-slider"  [style.background-color]="'green'"  >
+<div class="main-slider "  [ngStyle]="{'margin-left.px': marginLeftSlider() }" >
   <ngx-carousel  
   [inputs]="carouselBanner" 
   (carouselLoad)="carouselBannerLoad($event)">
@@ -15,7 +15,7 @@
                 <a href="#">read more...</a>
               </p>
           </div>
-          <img src="{{Banner}}"/>
+          <img src="{{Banner}}" />
       </ngx-item>
 
       <button NgxCarouselPrev class='leftRs'>&lt;</button>
@@ -32,7 +32,7 @@
   </div>
 
   <div>
-    <component-wrapper title="Help Group">
+    <component-wrapper title="Requests & Messages">
       <firebase2-ui title-buttons mode="title"></firebase2-ui>
       <help-group></help-group>
     </component-wrapper>
@@ -43,10 +43,11 @@
   <ngx-carousel 
     [inputs]="carouselTile" 
     (carouselLoad)="carouselTileLoad($event)">
-
           <ngx-tile NgxCarouselItem *ngFor="let Tile of carouselTileItems">
-              <h1>{{Tile + 1}} - Jhon Doe</h1>
-              <a href="mailto:example.birthday@gmail.com?Subject=Happy%20Birthday" target="_blank"><img src="../../../assets/person-flat.png" /></a>
+              <a href="mailto:example.birthday@gmail.com?Subject=Happy%20Birthday" target="_blank">
+                <h4>{{Tile + 1}} - Jhon Doe</h4>
+                <img src="https://raw.githubusercontent.com/bresleveloper/ng4/master/src/assets/person-flat.png" />
+              </a>
           </ngx-tile>
 
         <button NgxCarouselPrev class='leftRs'>&lt;</button>
