@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 //npm modules
 import { NgPipesModule } from 'ngx-pipes';
 import { NgxCarouselModule } from 'ngx-carousel';
-import { CarouselModule } from 'angular4-carousel'
 
 //my dream app modules
 import { MaterialArmadaModule } from '../Modules/material.module';
@@ -57,7 +56,6 @@ import { FireBaseUIMessageDialog } from '../Components/firebase2-ui/dialogs/mess
 
     NgPipesModule,
     NgxCarouselModule,
-    CarouselModule,
   ],
 
   providers:[

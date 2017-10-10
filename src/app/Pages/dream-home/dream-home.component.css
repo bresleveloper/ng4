@@ -13,11 +13,9 @@
     opacity: 0.7;
     background: white;
 }
->>> @media screen and (max-width: 600px){
-    .slide-html{  
-        right: 25px;
-        max-width: 50%;
-    }
+
+@media screen and (max-width: 600px){
+    >>> .slide-html{  right: 25px;max-width: 50%;}
 }
 
 
@@ -30,7 +28,7 @@
 >>> .birthdays .item:hover img {opacity: 1}
 >>> .birthdays .item:hover h4 {opacity: 0.2}
 
->>> @media screen and (max-width: 600px){
+@media screen and (max-width: 600px){
     >>> .birthdays div.item  {width: 33.3%}
 }
 

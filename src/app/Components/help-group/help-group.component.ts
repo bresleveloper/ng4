@@ -6,6 +6,7 @@ import 'rxjs/add/observable/of';
 
 import { FirebaseListObservable } from 'angularfire2/database'
 import { Firebase2Service } from '../../Services/firebase2.service';
+import 'rxjs/add/operator/map'
 
 @Component({
   selector: 'help-group',

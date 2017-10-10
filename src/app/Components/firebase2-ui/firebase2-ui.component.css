@@ -5,5 +5,5 @@
 
 @media screen and (max-width: 600px){
     :host {    padding-top: 10px;align-self: flex-end;}
-    :host .info-icon{right: -30px;top: 7px;}
+    :host .info-icon{right: -30px;top: 9px;}
 }

@@ -42,8 +42,5 @@ div {text-align:center}
 @media screen and (max-width: 600px){
     .docs-example-viewer-title{    flex-direction: column;}
     .docs-example-viewer-title-spacer{align-self: flex-start}
-
-
     .mat-table { max-height: 300px; }
-    .mat-header-row, .mat-row{padding: 12px;}
 }

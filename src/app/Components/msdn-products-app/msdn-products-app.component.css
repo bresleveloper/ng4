@@ -21,4 +21,5 @@ mat-card{display: inline-block;}
 
 @media screen and (max-width: 600px){
     >>> figure h4 { margin: 5px 0 }
+    >>> figure span:first-child{width: 40vw;}
 }
