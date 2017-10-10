@@ -196,10 +196,6 @@ SOFTWARE.
 MIT
 MIT
 
-angular4-carousel@3.1.8
-MIT
-MIT
-
 @angular/platform-browser@4.4.4
 MIT
 MIT
